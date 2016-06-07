@@ -87,7 +87,7 @@ describe 'Service#Robot', ->
             hits |= 0b1
             "#{data._creatorId}".should.eql "#{app.robot1._id}"
             data.body.should.eql 'ok'
-            data.authorName.should.eql '小艾'
+            data.authorName.should.eql '小新'
           resolve() if hits is 0b1
         catch err
           reject err

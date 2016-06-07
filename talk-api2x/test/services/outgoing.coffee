@@ -22,7 +22,7 @@ describe 'Service#Outgoing', ->
             if event is 'message:create' and "#{data._creatorId}" is "#{service.robot._id}"
               hits |= 0b1
               data.body.should.eql 'ok'
-              data.authorName.should.eql '小艾'
+              data.authorName.should.eql '小新'
             resolve() if hits is 0b1
           catch err
             reject err

@@ -145,7 +145,7 @@ describe 'Service#Webhook', ->
             if event is 'message:create' and "#{data._creatorId}" is "#{service.robot._id}"
               hits |= 0b1
               data.body.should.eql 'Hello'
-              data.authorName.should.eql '小艾'
+              data.authorName.should.eql '小新'
             resolve() if hits is 0b1
           catch err
             reject err
@@ -168,7 +168,7 @@ describe 'Service#Webhook', ->
         url: "/services/webhook/#{integration.hashId}"
         body:
           content: 'Hello'
-          authorName: '小艾'
+          authorName: '小新'
       requestAsync options
 
     Promise.all [$broadcast, $integration, $message]
@@ -181,7 +181,7 @@ describe 'Service#Webhook', ->
       options =
         method: 'POST'
         url: "/services/webhook/#{app.integration1.hashId}"
-        body: authorName: '小艾'
+        body: authorName: '小新'
       requestAsync options
       .catch (err) -> err.message.should.containEql 'Title and text can not be empty'
 

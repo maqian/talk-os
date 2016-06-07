@@ -132,7 +132,7 @@
 ## 1.29
 * refactor: use atomic operations in schema functions
 * test:
-    * 创建团队后，每个团队有一个公告板和一个小艾机器人
+    * 创建团队后，每个团队有一个公告板和一个小新机器人
     * 修改消息后，显示“更新于 xxx 时间”
     * 正常更新 preference
 
